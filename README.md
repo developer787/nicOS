@@ -182,3 +182,13 @@ vi /etc/pacman.d/mirrorlist
 ```sh
 pacman -Syy
 ```
+***
+
+
+
+&nbsp;
+#### Step 7 – Install the base system
+###### use the pacstrap command to install the system to /mnt
+```sh
+pacstrap -i /mnt base base-deve
+```
