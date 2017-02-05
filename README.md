@@ -173,7 +173,7 @@ lsblk /dev/sda
 
 
 &nbsp;
-#### Step 6 – Select a mirror
+#### Step six – Select a mirror
 ###### use vi to edit the mirrorlist
 ```sh
 vi /etc/pacman.d/mirrorlist
@@ -187,7 +187,7 @@ pacman -Syy
 
 
 &nbsp;
-#### Step 7 – Install the base system
+#### Step seven – Install the base system
 ###### use the pacstrap command to install the system to /mnt
 ```sh
 pacstrap -i /mnt base base-devel
