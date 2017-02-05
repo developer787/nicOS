@@ -282,7 +282,7 @@ HOOKS="base udev autodetect modconf block keymap keyboard usbinput encrypt files
 cd /boot
 mkinitcpio -p linux
 ```
-#### Step 13 – Install and configure GRUB bootloader
+#### Step 12 – Install and configure GRUB bootloader
 ###### install the GRUB2 bootloader.
 ```sh
 pacman -S grub
