@@ -164,3 +164,7 @@ mount /dev/mapper/cryptroot /mnt
 mkdir /mnt/boot
 mount /dev/sda2 /mnt/boot
 ```
+###### display the filesystems using the 'lsblk' command
+```sh
+lsblk /dev/sda
+```
