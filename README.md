@@ -219,3 +219,43 @@ cat /mnt/etc/fstab
 ```sh
 arch-chroot /mnt /bin/bash
 ```
+***
+
+
+
+&nbsp;
+#### Step 10 – Set locales and system information
+###### set a timezone with the following command. Substitute America and New_York with your zone and sub-zone
+```sh
+ln -s /usr/share/zoneinfo/America/New_York /etc/localtime
+```
+###### set the hardware clock with the following command
+```sh
+hwclock --systohc --utc
+```
+###### set locales. Use vi to edit the /etc/locale.gen file to uncomment your preferred encoding from the file.
+```sh
+vi /etc/locale.gen
+```
+```sh
+#en_PH ISO-8859-1
+#en_SG.UTF-8 UTF-8
+#en_SG ISO-8859-1
+en_US.UTF-8 UTF-8
+#en_US ISO-8859-1
+#en_ZA.UTF-8 UTF-8
+#en_ZA ISO-8859-1
+```
+###### use the command below to generate a locale.
+```sh
+locale-gen
+```
+######use the following two commands to generate a locale.conf file and set the LANG variable. Substitute en_US.UTF-8 with the encoding you uncommented in the step above.
+```sh
+echo LANG=en_US.UTF-8 > /etc/locale.conf
+export LANG=en_US.UTF-8
+```
+#### setup hostname
+```sh
+echo nicOS > /etc/hostname
+```
