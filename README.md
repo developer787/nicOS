@@ -198,7 +198,7 @@ pacstrap -i /mnt base base-devel
 
 &nbsp;
 #### Step eighth – Generate a fstab
-###### use the command below to generate one the fstab file
+###### use the command below to generate the fstab file
 ```sh
 genfstab -U /mnt >> /mnt/etc/fstab
 ```
