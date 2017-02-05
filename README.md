@@ -259,3 +259,26 @@ export LANG=en_US.UTF-8
 ```sh
 echo nicOS > /etc/hostname
 ```
+***
+
+
+
+&nbsp;
+#### Step 11 – Generate an initial ramdisk
+###### edit the /etc/mkinitcpio.conf file to include the following hooks
+```sh
+vi /etc/mkinitcpio.conf
+```
+###### Before…
+```sh
+HOOKS="base udev autodetect modconf block filesystems keyboard fsck"
+```
+###### After…
+```sh
+HOOKS="base udev autodetect modconf block keymap keyboard usbinput encrypt filesystems shutdown fsck"
+```
+###### generate the ramdisk
+```sh
+cd /boot
+mkinitcpio -p linux
+```
