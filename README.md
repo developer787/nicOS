@@ -282,3 +282,25 @@ HOOKS="base udev autodetect modconf block keymap keyboard usbinput encrypt files
 cd /boot
 mkinitcpio -p linux
 ```
+#### Step 13 – Install and configure GRUB bootloader
+###### install the GRUB2 bootloader.
+```sh
+pacman -S grub
+```
+###### edit the /etc/default/grub file
+```sh
+vi /etc/default/grub
+```
+###### Before…
+```sh
+GRUB_CMDLINE_LINUX=""
+```
+###### After…
+```sh
+GRUB_CMDLINE_LINUX="cryptdevice=/dev/sda3:cryptroot"
+```
+#### setup GRUB2 with the following two commands
+```sh
+grub-install --target=i386-pc --recheck /dev/sda
+grub-mkconfig -o /boot/grub/grub.cfg
+```
