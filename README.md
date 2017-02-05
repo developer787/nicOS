@@ -210,3 +210,12 @@ blkid
 ```sh
 cat /mnt/etc/fstab
 ```
+***
+
+
+&nbsp;
+#### Step nine – Chroot
+###### chroot into the system to begin configuration 
+```sh
+arch-chroot /mnt /bin/bash
+'''
