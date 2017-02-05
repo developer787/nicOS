@@ -168,3 +168,17 @@ mount /dev/sda2 /mnt/boot
 ```sh
 lsblk /dev/sda
 ```
+***
+
+
+
+&nbsp;
+#### Step 6 – Select a mirror
+###### use vi to edit the mirrorlist
+```sh
+vi /etc/pacman.d/mirrorlist
+```
+###### refresh the package lists
+```sh
+pacman -Syy
+```
