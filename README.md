@@ -192,3 +192,21 @@ pacman -Syy
 ```sh
 pacstrap -i /mnt base base-devel
 ```
+***
+
+
+
+&nbsp;
+#### Step eighth – Generate a fstab
+###### use the command below to generate one the fstab file
+```sh
+genfstab -U /mnt >> /mnt/etc/fstab
+```
+###### to check the fstab file for errors.
+```sh
+blkid
+```
+###### cat out the /mnt/etc/fstab file and compare the UUIDs and logical volumes types to what was returned by blkid above.
+```sh
+cat /mnt/etc/fstab
+```
