@@ -218,4 +218,4 @@ cat /mnt/etc/fstab
 ###### chroot into the system to begin configuration 
 ```sh
 arch-chroot /mnt /bin/bash
-'''
+```
