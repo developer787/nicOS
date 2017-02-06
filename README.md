@@ -124,7 +124,7 @@ Do you want to proceed? (Y/N): y
 ```
 ###### reboot the kernel
 ```sh
-# reboot
+reboot
 ```
 ***
 
