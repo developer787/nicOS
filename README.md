@@ -1,6 +1,6 @@
 # nicOS
 ###### A LUKS encrypted linux distro for software developers. 
-
+###### Virtual Box Edition. 
 
 
 &nbsp;
