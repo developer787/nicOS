@@ -304,3 +304,21 @@ GRUB_CMDLINE_LINUX="cryptdevice=/dev/sda3:cryptroot"
 grub-install --target=i386-pc --recheck /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
+***
+
+
+
+&nbsp;
+#### Step 13 – Reboot
+###### exit chroot
+```sh
+exit
+```
+###### unmount any filesystems
+```sh
+umount -R /mnt
+```
+###### shutdown your machine
+```sh
+shutdown -h now
+```
