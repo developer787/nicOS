@@ -322,3 +322,10 @@ umount -R /mnt
 ```sh
 shutdown -h now
 ```
+***
+
+##Installation Complete!!
+
+&nbsp;
+#### Step 14 – Start nicOS
+###### enter your password to unlock the encrypted partition on /dev/sda3 
