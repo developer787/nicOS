@@ -299,7 +299,7 @@ GRUB_CMDLINE_LINUX=""
 ```sh
 GRUB_CMDLINE_LINUX="cryptdevice=/dev/sda3:cryptroot"
 ```
-#### setup GRUB2 with the following two commands
+###### setup GRUB2 with the following two commands
 ```sh
 grub-install --target=i386-pc --recheck /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
@@ -329,3 +329,25 @@ shutdown -h now
 &nbsp;
 #### Step 14 – Start nicOS
 ###### enter your password to unlock the encrypted partition on /dev/sda3 
+```sh
+A password is required to access the cryptroot volume:
+Enter passphrase for /dev/sda3:
+```
+###### use the command 'ip link' to network interface name (e.g., enp0s3)
+```sh
+ip link
+1: lo: <LOOPBACK>
+2: enp0s3: <BROADCAST>
+```
+###### enable dhcpcd service
+```sh
+systemctl enable dhcpcd@enp0s3.service
+```
+###### start dhcpcd service
+```sh
+systemctl start dhcpcd@enp0s3.service
+```
+###### test network connection using the 'ping' command
+```sh
+ping -c 4 8.8.8.8
+```
