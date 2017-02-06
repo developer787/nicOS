@@ -333,7 +333,7 @@ shutdown -h now
 A password is required to access the cryptroot volume:
 Enter passphrase for /dev/sda3:
 ```
-###### use the command 'ip link' to network interface name (e.g., enp0s3)
+###### use the command 'ip link' to find the network interface name (e.g., enp0s3)
 ```sh
 ip link
 1: lo: <LOOPBACK>
