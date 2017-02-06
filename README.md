@@ -357,3 +357,23 @@ systemctl start dhcpcd@enp0s3.service
 ```sh
 ping -c 4 8.8.8.8
 ```
+***
+
+
+
+&nbsp;
+#### Step 16 - Install virtual box utilities
+###### use the following command
+```sh
+pacman -S virtualbox-guest-utils
+```
+***
+
+
+
+&nbsp;
+#### Step 17 - Install Xorg server utilities
+###### use the following command
+```sh
+pacman -S xorg-server xorg-server-utils xorg-xinit xorg-twm xterm --noconfirm --needed
+```
